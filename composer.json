@@ -130,8 +130,7 @@
         "web-token/jwt-signature-algorithm-experimental": "self.version",
         "web-token/jwt-encryption-algorithm-experimental": "self.version",
         "web-token/signature-pack": "self.version",
-        "web-token/encryption-pack": "self.version",
-        "web-token/jwt-framework": "^v2.2.7"
+        "web-token/encryption-pack": "self.version"
     },
    "suggest":{
        "ext-sodium": "Sodium is required for OKP key creation, EdDSA signature algorithm and ECDH-ES key encryption with OKP keys",
@@ -143,9 +142,13 @@
        "symfony/var-dumper": "Used to show data on the debug toolbar."
    },
     "conflict": {
-        "spomky-labs/jose": "*"
+        "spomky-labs/jose": "*",
+        "web-token/jwt-framework": "*"
     },
     "config": {
         "sort-packages": true
+    },
+    "provide": {
+        "web-token/jwt-framework": "self.version"
     }
 }
